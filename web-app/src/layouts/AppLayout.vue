@@ -25,7 +25,7 @@ function toggleLocale() {
   <div class="min-h-screen flex flex-col">
     <header class="border-b bg-background">
       <div class="mx-auto max-w-5xl px-4 h-14 flex items-center justify-between">
-        <RouterLink to="/" class="font-semibold text-lg">{{ t('app.name') }}</RouterLink>
+        <RouterLink to="/" class="font-semibold text-lg text-primary">{{ t('app.name') }}</RouterLink>
         <nav class="hidden md:flex items-center gap-1">
           <RouterLink
             v-for="link in [

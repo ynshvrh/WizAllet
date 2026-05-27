@@ -1,23 +1,38 @@
 @import "tailwindcss";
 
+/*
+ * Brand palette: #430a4d (deep purple) + #f7c8ff (soft pink).
+ * Income/expense colours stay green/red — that's a financial convention,
+ * brand colours don't override it.
+ */
 @theme {
-  --color-border: hsl(214.3 31.8% 91.4%);
-  --color-input: hsl(214.3 31.8% 91.4%);
-  --color-ring: hsl(222.2 84% 4.9%);
-  --color-background: hsl(0 0% 100%);
-  --color-foreground: hsl(222.2 84% 4.9%);
-  --color-primary: hsl(222.2 47.4% 11.2%);
-  --color-primary-foreground: hsl(210 40% 98%);
-  --color-secondary: hsl(210 40% 96.1%);
-  --color-secondary-foreground: hsl(222.2 47.4% 11.2%);
-  --color-muted: hsl(210 40% 96.1%);
-  --color-muted-foreground: hsl(215.4 16.3% 46.9%);
-  --color-accent: hsl(210 40% 96.1%);
-  --color-accent-foreground: hsl(222.2 47.4% 11.2%);
-  --color-destructive: hsl(0 84.2% 60.2%);
-  --color-destructive-foreground: hsl(210 40% 98%);
-  --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(222.2 84% 4.9%);
+  /* surfaces */
+  --color-background: #ffffff;
+  --color-foreground: #1a0b1f;
+  --color-card: #ffffff;
+  --color-card-foreground: #1a0b1f;
+
+  /* brand */
+  --color-primary: #430a4d;
+  --color-primary-foreground: #ffffff;
+
+  --color-accent: #f7c8ff;
+  --color-accent-foreground: #430a4d;
+
+  --color-secondary: #fce7ff;
+  --color-secondary-foreground: #430a4d;
+
+  /* neutrals */
+  --color-muted: #faf5fb;
+  --color-muted-foreground: #6b5874;
+
+  --color-border: #ead2ef;
+  --color-input: #ead2ef;
+  --color-ring: #430a4d;
+
+  /* feedback (untouched: red still means "you're losing money") */
+  --color-destructive: hsl(0 72% 50%);
+  --color-destructive-foreground: #ffffff;
 
   --radius: 0.5rem;
 }

@@ -41,7 +41,7 @@ async function onSubmit() {
 </script>
 
 <template>
-  <div class="min-h-screen flex items-center justify-center px-4 py-10 bg-muted/30">
+  <div class="min-h-screen flex items-center justify-center px-4 py-10 bg-accent/40">
     <Card class="w-full max-w-md p-8 space-y-6">
       <div class="space-y-2 text-center">
         <h1 class="text-2xl font-semibold">{{ t('auth.registerTitle') }}</h1>
