@@ -1,5 +1,18 @@
-# Vue 3 + TypeScript + Vite
+# web-app
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+The Vue 3 SPA. See the [repo root README](../README.md) for the full
+stack overview and architecture.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Scripts
+
+```sh
+pnpm dev       # vite dev server at http://localhost:5173
+pnpm build     # type-check (vue-tsc) + production build → dist/
+pnpm preview   # preview the production build locally
+```
+
+## Env
+
+`VITE_API_URL` — base URL of [wizallet-api](https://github.com/ynshvrh/wizallet-api).
+Defaults to `http://localhost:8080` if unset. Production value is baked
+in at build time via `netlify.toml`.
