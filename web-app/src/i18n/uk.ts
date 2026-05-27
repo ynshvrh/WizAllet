@@ -9,6 +9,10 @@ export default {
     settings: 'Налаштування',
     logout: 'Вийти',
   },
+  theme: {
+    switchToDark: 'Перемкнути на темну тему',
+    switchToLight: 'Перемкнути на світлу тему',
+  },
   auth: {
     loginTitle: 'Вхід',
     loginSubtitle: 'Раді бачити знову. Увійди за іменем користувача або email.',

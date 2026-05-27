@@ -5,8 +5,11 @@
  * Income/expense colours stay green/red — that's a financial convention,
  * brand colours don't override it.
  */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  /* surfaces */
+  /* surfaces — light defaults */
   --color-background: #ffffff;
   --color-foreground: #1a0b1f;
   --color-card: #ffffff;
@@ -35,6 +38,39 @@
   --color-destructive-foreground: #ffffff;
 
   --radius: 0.5rem;
+}
+
+/*
+ * Dark theme overrides. Primary is inverted (light purple on dark surfaces)
+ * so buttons stay punchy. Accent stays in the soft-pink family but darker
+ * so it can serve as a hover/active surface without blinding the user.
+ */
+.dark {
+  --color-background: #120814;
+  --color-foreground: #faeefe;
+  --color-card: #1c0f23;
+  --color-card-foreground: #faeefe;
+
+  --color-primary: #d896eb;
+  --color-primary-foreground: #1a0b1f;
+
+  --color-accent: #5e1968;
+  --color-accent-foreground: #f7c8ff;
+
+  --color-secondary: #2a1532;
+  --color-secondary-foreground: #f7c8ff;
+
+  --color-muted: #1f1224;
+  --color-muted-foreground: #b39bbe;
+
+  --color-border: #2e1a36;
+  --color-input: #2e1a36;
+  --color-ring: #d896eb;
+
+  --color-destructive: hsl(0 70% 65%);
+  --color-destructive-foreground: #1a0b1f;
+
+  color-scheme: dark;
 }
 
 @layer base {

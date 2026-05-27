@@ -5,8 +5,11 @@ import { VueQueryPlugin, QueryClient } from '@tanstack/vue-query'
 import App from './App.vue'
 import router from './router'
 import { i18n } from './i18n'
+import { initTheme } from './lib/theme'
 
 import './assets/main.css'
+
+initTheme()
 
 const queryClient = new QueryClient({
   defaultOptions: {

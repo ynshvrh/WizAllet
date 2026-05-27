@@ -9,6 +9,10 @@ export default {
     settings: 'Settings',
     logout: 'Log out',
   },
+  theme: {
+    switchToDark: 'Switch to dark theme',
+    switchToLight: 'Switch to light theme',
+  },
   auth: {
     loginTitle: 'Sign in',
     loginSubtitle: 'Welcome back. Sign in with your username or email.',

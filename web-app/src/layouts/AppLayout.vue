@@ -3,12 +3,14 @@ import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useAuthStore } from '@/stores/auth'
 import { setLocale, type AppLocale } from '@/i18n'
+import { useTheme } from '@/lib/theme'
 import Button from '@/components/ui/Button.vue'
-import { LogOut, Languages } from 'lucide-vue-next'
+import { LogOut, Languages, Sun, Moon } from 'lucide-vue-next'
 
 const auth = useAuthStore()
 const router = useRouter()
 const { t, locale } = useI18n()
+const { theme, toggle: toggleTheme } = useTheme()
 
 async function onLogout() {
   await auth.logout()
@@ -42,6 +44,15 @@ function toggleLocale() {
           </RouterLink>
         </nav>
         <div class="flex items-center gap-2">
+          <Button
+            variant="ghost"
+            size="sm"
+            :aria-label="theme === 'dark' ? t('theme.switchToLight') : t('theme.switchToDark')"
+            @click="toggleTheme"
+          >
+            <Sun v-if="theme === 'dark'" class="size-4" />
+            <Moon v-else class="size-4" />
+          </Button>
           <Button variant="ghost" size="sm" @click="toggleLocale">
             <Languages class="size-4" />
             <span class="uppercase">{{ locale }}</span>
